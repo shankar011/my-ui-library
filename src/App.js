@@ -1,26 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import "./App.css"
+import Header from './component/Header';
+import Notes from './component/Notes';
 
-const Counter = () => {
-    const [count, setCount] = useState(0);
 
-    useEffect(() => {
-        console.log('Component mounted');
-        return () => {
-            console.log('Component unmounted');
-        };
-    }, []);
-
-    const handleClick = () => {
-        setCount(count + 1);
-    };
-
+const App = () => {
     return (
-        <div className='App'>
-            <h1>{count}</h1>
-            <button onClick={handleClick}>Add</button>
-        </div>
-    );
-};
+        <div className='main'>
+           
+                <Header />
+                <Notes />
+            
 
-export default Counter;
+        </div>
+    )
+}
+
+export default App
